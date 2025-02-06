@@ -1,0 +1,11 @@
+<div class="seleccionado" id="container" [ngClass]="{'seleccionado': seleccionado}" (click)="playSound()">
+    @if (seleccionado) {
+        <img src="../../../assets/img/Flecha.png" id="flecha">
+    }
+    <div class="tarjeta" (click)="clickeado.emit(id)" [ngClass]="{'seleccionado': seleccionado}">
+        <img src="../../../assets/img/Pokeball.png" id="pokeball">
+        <img src='https://projectpokemon.org/images/sprites-models/sv-sprites-home/{{formatearId(id)}}.png' id="pokemon"  (error)="handleImageError($event)">
+        <span>No. {{formatearId(id)}}</span>
+        <span>{{data?.name | titlecase}}</span>
+    </div>
+</div>

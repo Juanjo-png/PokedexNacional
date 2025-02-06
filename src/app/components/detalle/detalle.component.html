@@ -1,0 +1,161 @@
+<div id="container">
+    <div id="detalle"><a routerLink="/home" href="#" routerLinkActive="active"><img src="../../../assets/img/Flecha.png" id="flecha"></a></div>
+    <div class="imagenContenedor">
+        <img src="{{pokemon?.sprites?.other?.home?.front_default}}" id="imagenPokemon">
+    </div>
+  <div id="datos">
+        <div id="nombre">
+            <div class="contendor">
+                <div class="tarjeta">
+                    <img src="../../../assets/img/Pokeball.png" id="pokeball">
+                    <img src="https://projectpokemon.org/images/sprites-models/sv-sprites-home/{{ pokemon ? formatearId(pokemon.id) : 'N/A' }}.png" id="sprite" (error)="handleImageError($event)">
+                    <span>No. {{ pokemon ? formatearId(pokemon.id) : 'N/A' }}</span>
+                    <span>{{pokemon?.name | titlecase}}</span>
+                </div>
+            </div>
+        </div>
+        <div id="info">
+            <div class="huella">
+                <div class="circulo">
+                <!-- <img [src]="'https://projectpokemon.org/images/normal-sprite/'+pokemon?.name+'.gif'" alt="../../../assets/img/Default.png" id="pokemon"></div> -->
+                <img [src]="pokemon?.sprites?.front_shiny" alt="../../../assets/img/Default.png" id="pokemon"></div>
+
+            </div>
+            <div class="columnas">
+                <div class="columna1">
+                    <div class="infos">Tipo</div>
+                    <div class="infos">Altura</div>
+                    <div class="infos">Peso</div>
+                </div>
+                <div class="columna2">
+                    <div class="tipos">
+                        @for (tipo of pokemon?.types; track $index) {
+                            @switch (tipo.type.name) {
+                                @case("steel"){
+                                    <div class="tipo acero">
+                                        <img src="../../../assets/img/tipos/Steel_icon.png" id="tipoIcono">
+                                        ACERO
+                                    </div>
+                                }
+                                @case ("ghost") {
+                                    <div class="tipo fantasma">
+                                        <img src="../../../assets/img/tipos/Ghost_icon.png" id="tipoIcono">
+                                        FANTASMA
+                                    </div>
+                                }
+                                @case ("fire") {
+                                    <div class="tipo fuego">
+                                        <img src="../../../assets/img/tipos/Fire_icon.png" id="tipoIcono">
+                                        FUEGO
+                                    </div>
+                                }
+                                @case ("water") {
+                                    <div class="tipo agua">
+                                        <img src="../../../assets/img/tipos/Water_icon.png" id="tipoIcono">
+                                        AGUA
+                                    </div>
+                                }
+                                @case ("grass") {
+                                    <div class="tipo planta">
+                                        <img src="../../../assets/img/tipos/Grass_icon.png" id="tipoIcono">
+                                        PLANTA
+                                    </div>
+                                }
+                                @case ("normal") {
+                                    <div class="tipo normal">
+                                        <img src="../../../assets/img/tipos/Normal_icon.png" id="tipoIcono">
+                                        NORMAL
+                                    </div>
+                                }
+                                @case ("bug") {
+                                    <div class="tipo bicho">
+                                        <img src="../../../assets/img/tipos/Bug_icon.png" id="tipoIcono">
+                                        BICHO
+                                    </div>
+                                }
+                                @case ("flying") {
+                                    <div class="tipo volador">
+                                        <img src="../../../assets/img/tipos/Flying_icon.png" id="tipoIcono">
+                                        VOLADOR
+                                    </div>
+                                }
+                                @case ("dragon") {
+                                    <div class="tipo dragon">
+                                        <img src="../../../assets/img/tipos/Dragon_icon.png" id="tipoIcono">
+                                        DRAGÓN
+                                    </div>
+                                }
+                                @case ("fairy") {
+                                    <div class="tipo hada">
+                                        <img src="../../../assets/img/tipos/Fairy_icon.png" id="tipoIcono">
+                                        HADA
+                                    </div>
+                                }
+                                @case ("ice") {
+                                    <div class="tipo hielo">
+                                        <img src="../../../assets/img/tipos/Ice_icon.png" id="tipoIcono">
+                                        HIELO
+                                    </div>
+                                }
+                                @case ("electric") {
+                                    <div class="tipo electrico">
+                                        <img src="../../../assets/img/tipos/Electric_icon.png" id="tipoIcono">
+                                        ELÉCTRICO
+                                    </div>
+                                }
+                                @case ("ground") {
+                                    <div class="tipo tierra">
+                                        <img src="../../../assets/img/tipos/Ground_icon.png" id="tipoIcono">
+                                        TIERRA
+                                    </div>
+                                }
+                                @case ("rock") {
+                                    <div class="tipo roca">
+                                        <img src="../../../assets/img/tipos/Rock_icon.png" id="tipoIcono">
+                                        ROCA
+                                    </div>
+                                }
+                                @case ("fighting") {
+                                    <div class="tipo lucha">
+                                        <img src="../../../assets/img/tipos/Fighting_icon.png" id="tipoIcono">
+                                        LUCHA
+                                    </div>
+                                }
+                                @case ("psychic") {
+                                    <div class="tipo psiquico">
+                                        <img src="../../../assets/img/tipos/Psychic_icon.png" id="tipoIcono">
+                                        PSIQUICO 
+                                    </div>
+                                }
+                                @case ("dark") {
+                                    <div class="tipo siniestro">
+                                        <img src="../../../assets/img/tipos/Dark_icon.png" id="tipoIcono">
+                                        SINIESTRO
+                                    </div>
+                                }
+                                @case ("poison") {
+                                    <div class="tipo veneno">
+                                        <img src="../../../assets/img/tipos/Poison_icon.png" id="tipoIcono">
+                                        VENENO
+                                    </div>
+                                }
+                                
+                            }
+                            
+                        }
+                    </div>
+                    <div class="dato"> {{pokemon?.height}} dm</div>
+                    <div class="dato">{{pokemon?.weight}} lbs.</div>
+                </div>
+            </div>
+        </div>
+        <div id="descripcion">
+            <div class="caja">
+                <div class="bordeCaja"></div>
+                {{description}}
+                <div class="bordeCaja"></div>
+            </div>
+            
+        </div>
+  </div>
+</div>

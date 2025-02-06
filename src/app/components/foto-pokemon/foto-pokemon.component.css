@@ -1,0 +1,21 @@
+#Principal{
+    width: 75%; 
+    height: auto; 
+
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 1600px){
+    #Principal{
+        width: 600px;
+    }
+}
+

@@ -1,0 +1,360 @@
+
+#container {
+    height: 87vh;
+    width: 100%;
+    display: flex;    
+    margin-right: 0px;
+    background-color: #d3ecf6;
+    background-image: linear-gradient(45deg, #c4e8f8 25%, transparent 25%, transparent 75%, #c4e8f8 75%, #c4e8f8),
+                      linear-gradient(-45deg, #c4e8f8 25%, transparent 25%, transparent 75%, #c4e8f8 75%, #c4e8f8);
+    background-size: 20px 20px;
+}
+
+#datos{
+    position: absolute;
+    font-weight: 400;
+    z-index: 0;
+    width: 100%;
+    margin-top: 40px;
+    height: 540px;
+    background-color: #E8DEC1;
+    font-size: 20px;
+}
+
+#nombre{
+    padding-left: 700px;
+    height: 90px;
+    background-color: #bfc3ce;
+    margin-top: 5px;
+    padding-top: 10px;
+}
+
+#info{
+    padding-left: 700px;
+    height: 200px;
+    margin-top: 50px;
+    background-color: #C5E7F9;
+    display: flex;
+    gap: 20px;
+    padding-top: 15px;
+}
+
+#descripcion{
+    padding-left: 700px;
+    height: 173px;
+    background: repeating-linear-gradient(
+      0deg,
+      #cce486,
+      #cce486 2px,
+      #bfd678 2px,
+      #bfd678 4px
+    );
+    border-bottom: 5px solid #eefebb;
+    padding-top: 20px;
+    font-size: 20px;
+    height: 190px;
+}
+
+.imagenContenedor{
+    position: relative;
+    margin-left: 92px;
+    margin-top: 50px;
+    align-items: center;
+    width: 590px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 520px;
+    border: solid 5px #89CAF2;
+    outline: solid 10px #F7E45C;
+    border-radius: 10px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #f5f7f9,
+        #f5f7f9 15px,
+        #c9e2f4 15px,
+        #c9e2f4 30px
+    );
+    z-index: 999999; /* Cambiado a un valor mayor que -1 */
+}
+
+.imagenContenedor img{
+    width: 80%;
+}
+
+#pokemon{
+    width: 80%;
+}
+
+#imagenPokemon{
+    width: 450px;
+    height: auto;
+}
+
+.infos{
+    background-color: #6BBAE9;
+    font-size: 20px;
+    color: white;
+    margin-top: 0px;
+    border-radius: 4px;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.columnas{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+}
+
+.columna2{
+    width: fit-content;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+}
+
+.columna3{
+    font-size: 15px;
+    margin-left: 40px;
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: repeat(2,2fr);
+}
+
+.circulo{
+    background-color: white;
+    border: 9px solid #F5B8CC;
+    outline: 3px solid #E888AD;
+    width: 170px;
+    height: 170px;
+    align-items: center ;
+    vertical-align: middle;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10%;
+    border-radius: 80px;
+}
+
+.caja{
+    background-color: #EFECD3;
+    padding: 20px;
+    margin-right: 20px;
+    height: 130px;
+    border-radius: 10px;
+    margin-left: 10px;
+    -webkit-box-shadow: 2px 1px 30px 8px rgba(184,181,160,0.62);
+    -moz-box-shadow: 2px 1px 30px 8px rgba(184,181,160,0.62);
+    box-shadow: 2px 1px 30px 8px rgba(184,181,160,0.62);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.bordeCaja{
+    background-color: #CBD9B8;
+    height: 100%;
+    width: 10px;
+    border-radius: 3px;
+}
+
+.huella{
+    margin-left: 20px;
+    width: min-content;
+    height: auto;
+}
+
+.contendor{
+    background-color: #D49361;
+    padding: 5px;
+    border-radius: 35px;
+    width: 750px;
+    margin-left: 10px;
+}
+
+.tarjeta {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    align-items: center;
+    background-color: #F59747;
+        -webkit-box-shadow: inset 0px 0px 6px 4px #FDE8B6;
+        -moz-box-shadow: inset 0px 0px 6px 4px #FDE8B6;
+        box-shadow: inset 0px 0px 6px 4px #FDE8B6;
+    border-radius: 35px 5px 5px 35px;
+    padding: 10px;
+    width: 500px;
+    height: 60px;
+    margin-right: 0px;
+}
+
+#pokeball{
+    width: 50px;
+    height: auto;
+}
+   
+#sprite{
+    width: 50px;
+    height: auto;
+}
+
+.tipos{
+    display: flex;
+    gap: 10px;
+}
+
+.tipo{
+    width: fit-content;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    gap: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    border-radius: 4px;
+    padding-bottom: 5px;
+}
+
+#tipoIcono{
+    width: 30px;
+}
+
+.fantasma{
+    background-color: #6E446F;
+}
+
+.acero{
+    background-color: #6BADD3;
+}
+
+.planta{
+    background-color: #45BE29;
+}
+
+.dragon{
+    background-color: #5863D6;
+}
+
+.hielo{
+    background-color: #45BEFE;
+}
+
+.veneno{
+    background-color: #9A4DCD;
+}
+
+.fuego{
+    background-color: #FD6130;
+}
+
+.volador{
+    background-color: #97C8FD;
+}
+
+.agua{
+    background-color: #2B94FF;
+}
+
+.bicho{
+    background-color: #A2A329;
+}
+
+.normal{
+    background-color: #99989A;
+}
+
+.electrico{
+    background-color: #FFDA05;
+}
+
+.tierra{
+    background-color: #AB793C;
+}
+
+.hada{
+    background-color: #FFB1FF;
+}
+
+.lucha{
+    background-color: #FDA206;
+}
+
+.psiquico{
+    background-color: #FD6381;
+}
+
+.roca{
+    background-color: #BEB78C;
+}
+
+.siniestro{
+    background-color: #4E4647;
+}
+
+#detalle{
+    border-right: 9px #E4AA6D solid;
+    border-bottom: 9px #E4AA6D solid;
+    border-top: 9px #E4AA6D solid;
+    position: absolute;
+    margin-top: 10px;
+    z-index: 999999;
+    background-color: #EFDCA4;
+    height: 600px;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-left: 20px;
+    border-radius: 0px 30px 30px 0px;
+    width: 82px;
+    padding-right: 30px;
+}
+
+#flecha{
+    position: relative;
+    transform: scaleX(-1);
+    width: 60px;
+    animation: arrowAnimation 700ms infinite;
+}
+
+@keyframes arrowAnimation {
+    0% {
+      left: 0;
+    }
+    50% {
+      left: 10px;
+    }
+    100% {
+      left: 0;
+    }
+}
+
+@media only screen and (min-width: 1600px){
+    #container {
+        align-items: center;
+    }
+
+    .imagenContenedor{
+        width: 40%;
+        height: 75%;
+    }
+
+    #datos{
+        padding-left: 9%;
+        width: 100%;
+    }
+
+    #descripcion{
+        width: 100%
+    }
+}
+    
+    
+    

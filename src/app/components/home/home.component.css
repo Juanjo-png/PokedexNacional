@@ -1,0 +1,181 @@
+
+.cuerpo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: repeating-linear-gradient(
+        0deg,
+        #79a0e3 0px,
+        #79a0e3 10px,
+        #668cd7 10px,
+        #668cd7 50px,
+        #79a0e3 50px,
+        #79a0e3 60px,
+        #5576c5 60px,
+        #5576c5 90px,
+        #79a0e3 90px,
+        #79a0e3 100px,
+        #4c69b8 100px,
+        #4c69b8 140px,
+        #79a0e3 140px,
+        #79a0e3 150px,
+        #4660b4 150px,
+        #4660b4 160px,
+        #79a0e3 160px,
+        #79a0e3 170px,
+        #5576c5 170px,
+        #5576c5 190px
+      );
+
+      ::-webkit-scrollbar{
+        width: 12px;
+        margin-right: 20px;
+      }
+      
+      ::-webkit-scrollbar-thumb{
+        background-color: #e9563d;
+        border-radius: 2px;
+        /* Con este truco hago el thumb más chico que su padre */
+        box-shadow: inset 0 0 0 2px #882a1a;
+        border-left: 1.5px solid transparent;
+        border-right: 1.5px solid transparent;
+        background-clip: padding-box;
+        cursor:grab;
+      }
+      ::-webkit-scrollbar-track {
+        border: solid #90ace7 2px;
+        cursor: pointer;
+        background: repeating-linear-gradient(
+          0deg,
+          #276d83,
+          #276d83 5px,
+          #1c4760 7px,
+          #a2d0eb 9px
+        );
+      }
+}
+
+.container{
+    position: relative;
+    width: 38%;
+    height: 85%;
+    border: solid 5px #89CAF2;
+    outline: solid 10px #F7E45C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 2;
+    margin-left: 240px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #f5f7f9,
+        #f5f7f9 15px,
+        #c9e2f4 15px,
+        #c9e2f4 30px
+    );
+    img{
+      width: 70vh;
+    }
+}
+
+.container::before{
+    border: solid 6px #8BC7ED;
+}
+
+.lista{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 600px;
+    margin-right: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#spinner{
+    width: 50px;
+}
+
+#detalle{
+  background-color: #EFDCA4;
+  border-right: 9px #E4AA6D solid;
+  border-bottom: 9px #E4AA6D solid;
+  border-top: 9px #E4AA6D solid;
+  height: 60vh;
+  position: absolute;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding-left: 1;
+  padding-top: 500px;
+  border-radius: 0px 30px 30px 0px;
+  width: 130px;
+}
+
+.wrapper:hover #detalle {
+  transition: 1s;
+  left: 0;
+}
+
+#detalle a img{
+  width: 130px;
+  height: auto;
+  position: absolute;
+  top: 40%;
+  margin-left: 10px;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+
+@media only screen and (min-width: 1600px){
+  .container{
+    width: 50%;
+    height: 90%;
+  }
+
+  #container{
+    img{
+      width: 100%;
+    }
+  }  
+}
+
+

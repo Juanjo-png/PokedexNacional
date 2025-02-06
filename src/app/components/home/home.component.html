@@ -1,0 +1,18 @@
+<div class="cuerpo">
+    @if (pokemonSeleccionado) {
+        <div id="detalle">
+            <a [routerLink]="['/detalle', pokemonSeleccionado?.id]" href="#" routerLinkActive="active" ><img src="../../../assets/img/Pokeball.png" class="rotating"></a>
+        </div>
+    }
+    <div class="container">
+        <app-foto-pokemon [pokemon]="pokemonSeleccionado"></app-foto-pokemon>
+    </div>
+    <div class="lista" #tarjetas (scroll)="onScroll($event)">
+        @for (pokemon of listaPokemon; track $index) {
+            <app-tarjeta [data]="pokemon" (clickeado)="tarjetaClickeada($event)" [seleccionado]="pokemon.name === pokemonSeleccionado?.name"></app-tarjeta>
+        }
+        @if (cargando) {
+            <img src="../../../assets/img/spinner.svg" alt="Cargando" id="spinner">
+        }
+    </div>
+</div>
