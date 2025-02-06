@@ -9,7 +9,7 @@ export class PokemonService {
 
   constructor() { }
 
-  async getByPage(page:number ,size: number = 20):Promise<Resultado[]>{
+  async getByPage(page:number ,size: number = 100):Promise<Resultado[]>{
     if (page > 5) return [];
     const offset = (page-1)*size
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=${size}&offset=${offset}`)
